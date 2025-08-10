@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Phiếu Thống Kê Đảng Viên</title>
+<style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid black; padding: 5px; text-align: center; }
+    th { background-color: #f2f2f2; }
+    h2, h3 { text-align: center; margin: 5px 0; }
+    .btn { padding: 8px 12px; background: #28a745; color: white; border: none; cursor: pointer; margin-bottom: 10px; }
+    .btn:hover { background: #218838; }
+</style>
+</head>
+<body>
+
+<h2>PHIẾU THỐNG KÊ ĐẢNG VIÊN</h2>
+<h3>ĐÃ HOÀN THÀNH ĐỔI THẺ VÀ CHƯA HOÀN THÀNH ĐỔI THẺ ĐẢNG VIÊN</h3>
+
+<button class="btn" onclick="downloadFile()">Tải file HTML</button>
+
+<table id="bang" contenteditable="true">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Họ và tên</th>
+            <th>Hoàn thành</th>
+            <th>Chưa hoàn thành</th>
+            <th>Ghi chú</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>1</td><td>Lâm Thị Thúy An</td><td>x</td><td></td><td>do nghỉ thai sản</td></tr>
+        <tr><td>2</td><td>Lê Thái Ái</td><td></td><td>x</td><td></td></tr>
+        <tr><td>3</td><td>Phạm Thanh Bình</td><td></td><td></td><td></td></tr>
+        <tr><td>4</td><td>Phạm Trường Cảnh</td><td></td><td></td><td></td></tr>
+        <tr><td>5</td><td>Phạm Thị Chúc</td><td></td><td></td><td></td></tr>
+        <tr><td>6</td><td>Nguyễn Xuân Thành Chuyển</td><td></td><td></td><td></td></tr>
+        <tr><td>7</td><td>Đào Thị Mỹ Dung</td><td></td><td></td><td></td></tr>
+        <tr><td>8</td><td>Nguyễn Văn Điệp</td><td></td><td></td><td></td></tr>
+        <tr><td>9</td><td>Ngô Dư Em</td><td></td><td>x</td><td>đảng viên dự bị</td></tr>
+        <tr><td>10</td><td>Phạm Phong Em</td><td></td><td></td><td></td></tr>
+        <tr><td>11</td><td>Phan Văn Hậu</td><td></td><td></td><td></td></tr>
+        <tr><td>12</td><td>Bùi Thị Minh Hiền</td><td></td><td></td><td></td></tr>
+        <tr><td>13</td><td>Ngô Thị Hồng Hiếu</td><td></td><td></td><td></td></tr>
+        <tr><td>14</td><td>Nguyễn Thị Bích Hợp</td><td></td><td></td><td></td></tr>
+        <tr><td>15</td><td>Trần Văn Khon</td><td></td><td></td><td></td></tr>
+        <tr><td>16</td><td>Nguyễn Thị Minh Lai</td><td></td><td></td><td></td></tr>
+        <tr><td>17</td><td>Thái Thị Tuyết Lan</td><td></td><td></td><td></td></tr>
+        <tr><td>18</td><td>Vương Bạch Lan</td><td></td><td></td><td></td></tr>
+        <tr><td>19</td><td>Trần Thị Thùy Linh</td><td></td><td></td><td></td></tr>
+        <tr><td>20</td><td>Võ Công Long</td><td></td><td></td><td></td></tr>
+        <tr><td>21</td><td>Đỗ Phi Long</td><td></td><td></td><td></td></tr>
+        <tr><td>22</td><td>Doãn Công Luân</td><td></td><td></td><td></td></tr>
+        <tr><td>23</td><td>Tạ Tuyết Ngân</td><td></td><td></td><td></td></tr>
+        <tr><td>24</td><td>Trần Thị Cẩm Ngân</td><td></td><td></td><td></td></tr>
+        <tr><td>25</td><td>Trần Thị Thanh Ngân</td><td></td><td></td><td></td></tr>
+        <tr><td>26</td><td>Đặng Thị Ngọc Nga</td><td></td><td></td><td></td></tr>
+        <tr><td>27</td><td>Hà Thị Yến Oanh</td><td></td><td></td><td></td></tr>
+        <tr><td>28</td><td>Nguyễn Thị Thanh Phú</td><td></td><td></td><td></td></tr>
+        <tr><td>29</td><td>Ngô Văn Phú</td><td></td><td></td><td></td></tr>
+        <tr><td>30</td><td>Trần Trọng Thanh Phùng</td><td></td><td></td><td></td></tr>
+        <tr><td>31</td><td>Tý Quân</td><td></td><td></td><td></td></tr>
+        <tr><td>32</td><td>Phan Minh Quốc</td><td></td><td></td><td></td></tr>
+        <tr><td>33</td><td>Lương Thanh Sáng</td><td></td><td></td><td></td></tr>
+        <tr><td>34</td><td>Trần Bích Tuyền</td><td></td><td></td><td></td></tr>
+        <tr><td>35</td><td>Lê Thị Tuyết</td><td></td><td></td><td></td></tr>
+        <tr><td>36</td><td>Ma Lịch Thanh Thảo</td><td></td><td></td><td></td></tr>
+        <tr><td>37</td><td>Lê Thị Minh Thư</td><td></td><td></td><td></td></tr>
+        <tr><td>38</td><td>Phan Trần Quốc Trí</td><td></td><td></td><td></td></tr>
+        <tr><td>39</td><td>Huỳnh Lợi Trinh</td><td></td><td></td><td></td></tr>
+        <tr><td>40</td><td>Phan Minh Tuấn</td><td></td><td></td><td></td></tr>
+        <tr><td>41</td><td>Đoàn Nhật Trường</td><td></td><td></td><td></td></tr>
+        <tr><td>42</td><td>Đặng Thanh Vân</td><td></td><td></td><td></td></tr>
+        <tr><td>43</td><td>Trần Hữu Vi</td><td></td><td></td><td></td></tr>
+        <tr><td>44</td><td>Cao Hữu Vũ</td><td></td><td></td><td></td></tr>
+    </tbody>
+</table>
+
+<script>
+const table = document.getElementById("bang");
+
+function saveToServer() {
+    const htmlContent = table.outerHTML;
+    fetch("save.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: "data=" + encodeURIComponent(htmlContent)
+    })
+    .then(res => res.text())
+    .then(msg => console.log(msg))
+    .catch(err => console.error(err));
+}
+
+// Tự động lưu khi thay đổi
+table.addEventListener("input", saveToServer);
+
+// Tải file HTML đã lưu
+function downloadFile() {
+    window.location.href = "bang_dangvien.html";
+}
+</script>
+
+</body>
+</html>
